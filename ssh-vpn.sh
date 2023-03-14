@@ -326,7 +326,7 @@ chmod +x cfh
 chmod +x autoreboot
 chmod +x bannerku
 #chmod +x bbr
-chmod +x menu
+chmod +x menu-ssh
 #chmod +x trojaan
 #chmod +x vleess
 #chmod +x wgr
