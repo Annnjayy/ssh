@@ -240,7 +240,7 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 wget -O add-host "https://raw.githubusercontent.com/Annnjayy/ssh/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/senowahyu62/freesc/main/about.sh"
+wget -O about "https://raw.githubusercontent.com/Annjayy/freesc/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/senowahyu62/freesc/main/menu.sh"
 wget -O usernew "https://raw.githubusercontent.com/Annnjayy/ssh/main/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/Annnjayy/ssh/main/trial.sh"
@@ -255,7 +255,7 @@ apt-get install curl
 curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
 apt-get install speedtest -y
 wget -O info "https://raw.githubusercontent.com/Annnjayy/ssh/main/info.sh"
-#wget -O ram "https://raw.githubusercontent.com/senowahyu62/freesc/main/ram.sh"
+wget -O ram "https://raw.githubusercontent.com/Annnjayy/ssh/main/ram.sh"
 wget -O renew "https://raw.githubusercontent.com/Annnjayy/ssh/main/renew.sh"
 wget -O autokill "https://raw.githubusercontent.com/Annnjayy/ssh/main/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/Annnjayy/ssh/main/ceklim.sh"
@@ -274,11 +274,11 @@ wget -O port-ws "https://raw.githubusercontent.com/senowahyu62/freesc/main/port-
 wget -O clear-log "https://raw.githubusercontent.com/senowahyu62/freesc/main/clear-log.sh"
 wget -O xp "https://raw.githubusercontent.com/senowahyu62/freesc/main/xp.sh"
 #wget -O /usr/bin/user-limit https://raw.githubusercontent.com/senowahyu62/freesc/main/user-limit.sh && chmod +x /usr/bin/user-limit
-wget -O cfd "https://raw.githubusercontent.com/senowahyu62/freesc/main/cfd.sh"
+wget -O cfd "https://raw.githubusercontent.com/Annnjayy/ssh/main/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/senowahyu62/freesc/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/senowahyu62/freesc/main/cfh.sh"
 wget -O autoreboot "https://raw.githubusercontent.com/senowahyu62/freesc/main/autoreboot.sh"
-wget -O bannerku "https://raw.githubusercontent.com/senowahyu62/freesc/main/menu-all/bannerku"
+wget -O bannerku "https://raw.githubusercontent.com/Annnjayy/ssh/main/bannerku"
 #wget -O bbr "https://raw.githubusercontent.com/senowahyu62/freesc/main/menu-all/bbr.sh"
 wget -O menu "https://raw.githubusercontent.com/senowahyu62/freesc/main/menu-all/menu.sh"
 #wget -O trojaan "https://raw.githubusercontent.com/senowahyu62/freesc/main/menu-all/trojaan.sh"
@@ -300,7 +300,7 @@ chmod +x delete
 #chmod +x cek
 chmod +x restart
 #chmod +x speedtest
-#chmod +x info
+chmod +x info
 chmod +x about
 chmod +x autokill
 #chmod +x tendang
