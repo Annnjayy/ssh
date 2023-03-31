@@ -63,7 +63,7 @@ systemctl restart ws-tls
 
 # Getting Ovpn Ws Template
 wget -q -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/Annnjay/ssh/main/ws-ovpn.py
-chmod +x /usr/local/bin/ws-ovpn.py
+chmod +x /usr/local/bin/ws-ovpn
 
 
 # Installing Service Ovpn Websocket
