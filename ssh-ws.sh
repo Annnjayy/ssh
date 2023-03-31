@@ -11,7 +11,7 @@ wget -q -O /usr/local/bin/ssh-ws https://raw.githubusercontent.com/Annnjayy/ssh/
 chmod +x /usr/local/bin/ssh-ws
 
 # Installing Service
-cat > /etc/systemd/system/sshws-nontls.service << END
+cat > /etc/systemd/system/ws-nontls.service << END
 [Unit]
 Description=Ssh Websocket By MakhlukVpn
 Documentation=https://t.me/MakhlukVpn
@@ -31,11 +31,11 @@ WantedBy=multi-user.target
 END
 
 systemctl daemon-reload
-systemctl enable sshws-nontls
-systemctl restart sshws-nontls
+systemctl enable ws-nontls
+systemctl restart ws-nontls
 
 # Installing Service
-cat > /etc/systemd/system/sshws-tls.service << END
+cat > /etc/systemd/system/ws-tls.service << END
 [Unit]
 Description=Ssh Websocket MakhlukVpn
 Documentation=https://t.me/MakhlukVpn
@@ -47,7 +47,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/ssh-ws 1945
+ExecStart=/usr/bin/python -O /usr/local/bin/ssh-ws 2086
 Restart=on-failure
 
 [Install]
@@ -96,7 +96,7 @@ echo -e "  Done Install Ssh & Ovpn Websocket  "
 echo -e "==============================="
 echo -e "PORT SSH NONTLS : 80"
 echo -e "PORT SSH TLS    : 443"
-echo -e "PORT OVPN WS B  : 2082"
+echo -e "PORT OVPN WS B  : 2086"
 echo -e "==============================="
 echo -e "        Script By MakhlukVpn          "
 echo -e "==============================="
