@@ -55,8 +55,8 @@ WantedBy=multi-user.target
 END
 
 systemctl daemon-reload
-systemctl enable sshws-tls
-systemctl restart sshws-tls
+systemctl enable ws-tls
+systemctl restart ws-tls
 
 # Ovpn Websocket !!!
 # =================================
