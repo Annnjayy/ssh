@@ -6,7 +6,7 @@ echo Cek Hak Akses...
 sleep 0.5
 cd /usr/local/bin/
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/Annnjayy/ssh/main/ssh-ws-stunnel.py
-chmod +x /usr/local/bin/ws-stunnel.py
+chmod +x /usr/local/bin/ws-stunnel
 
 # Installing Service
 cat > /etc/systemd/system/ws-stunnel.service << END
