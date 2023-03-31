@@ -8,7 +8,7 @@ sleep 0.5
 # Getting Proxy Template
 cd /usr/local/bin/
 wget -q -O /usr/local/bin/ssh-ws https://raw.githubusercontent.com/Annnjayy/ssh/main/ssh-ws.py
-chmod +x /usr/local/bin/ssh-ws.py
+chmod +x /usr/local/bin/ssh-ws
 
 # Installing Service
 cat > /etc/systemd/system/sshws-nontls.service << END
