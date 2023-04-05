@@ -438,7 +438,7 @@ echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 # Ganti Banner
-wget -O /etc/issue.net "https://juniartieka.github.io/project/ssh/issue.net"
+wget --output-document=/etc/issue.net "https://raw.githubusercontent.com/Annnjayy/ssh/main/config/banner"
 
 sleep 4
 }
