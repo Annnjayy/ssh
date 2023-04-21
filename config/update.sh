@@ -5,4 +5,4 @@ mkdir /tmp/menu
 chmod +x /tmp/menu/*
 mv /tmp/menu/* /usr/sbin/
 rm /root/update.sh
-echo -e " ${green} Update Script Done......
+echo -e " ${green} Update Script Done......"
