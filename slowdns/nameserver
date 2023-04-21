@@ -1,13 +1,13 @@
 #!/bin/sh
-REPOS="https://github.com/Annnjayy/ssh/raw/main/"
+REPO="https://raw.githubusercontent.com/Annnjayy/ssh/main/"
 ns_domain_cloudflare() {
-	DOMAIN=$(cat /root/domain)
+	DOMAIN="slowdns.app"
 	DOMAIN_PATH=$(cat /etc/xray/domain)
-	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c6)
-	SUB_DOMAIN=${SUB}.$DOMAIN
-	NS_DOMAIN=ns.${SUB_DOMAIN}
-	CF_ID=paoandest@gmail.com
-        CF_KEY=1d158d0efc4eef787222cefff0b6d20981462
+	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c7)
+	SUB_DOMAIN=${SUB}."slowdns.app"
+	NS_DOMAIN=dns.${SUB_DOMAIN}
+	CF_ID=nuryahyamuhaimin@gmail.com
+        CF_KEY=9dd2f30c099dbcf541cbd5c188d61ce060cf7
 	set -euo pipefail
 	IP=$(wget -qO- ipinfo.io/ip)
 	echo "Updating DNS NS for ${NS_DOMAIN}..."
