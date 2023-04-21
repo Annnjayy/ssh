@@ -22,7 +22,7 @@
           "decryption":"none",
             "clients": [
                {
-                 "id": "cendrawasih"
+                 "id": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #vless
              }
           ]
@@ -41,7 +41,7 @@
       "settings": {
             "clients": [
                {
-                 "id": "cendrawasih",
+                 "id": "36326ea2-6994-4d53-bcd5-f43bbdaec562",
                  "alterId": 0
 #vmess
              }
@@ -62,7 +62,7 @@
           "decryption":"none",
            "clients": [
               {
-                 "password": "cendrawasih"
+                 "password": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #trojanws
               }
           ],
@@ -83,7 +83,7 @@
            "clients": [
            {
            "method": "aes-128-gcm",
-          "password": "cendrawasih"
+          "password": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #ssws
            }
           ],
@@ -104,7 +104,7 @@
          "decryption":"none",
            "clients": [
              {
-               "id": "cendrawasih"
+               "id": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #vlessgrpc
              }
           ]
@@ -123,7 +123,7 @@
       "settings": {
             "clients": [
                {
-                 "id": "cendrawasih",
+                 "id": "36326ea2-6994-4d53-bcd5-f43bbdaec562",
                  "alterId": 0
 #vmessgrpc
              }
@@ -144,7 +144,7 @@
           "decryption":"none",
              "clients": [
                {
-                 "password": "cendrawasih"
+                 "password": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #trojangrpc
                }
            ]
@@ -164,7 +164,7 @@
         "clients": [
           {
              "method": "aes-128-gcm",
-             "password": "cendrawasih"
+             "password": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #ssgrpc
            }
          ],
@@ -294,17 +294,18 @@
   "dns": {
     "hosts": {
       "dns.tiarap": "174.138.21.128",
+      "dns.1host": "76.76.2.38",
       "geosite:category-ads-all": "127.0.0.1"
     },
     "servers": [
       {
-        "address": "https://doh.tiar.app/dns-query",
-        "domains": ["geosite:geolocation-!id"],
-        "expectIPs": ["geoip:!id"]
+        "address": "https://doh.tiarap.org/dns-query",
+        "domains": ["geosite:geolocation-!cn"],
+        "expectIPs": ["geoip:!cn"]
       },
       "174.138.21.128",
       {
-        "address": "1.1.1.1",
+        "address": "174.138.21.128",
         "port": 53,
         "domains": ["geosite:id", "geosite:category-games@id"],
         "expectIPs": ["geoip:id"],
@@ -337,7 +338,7 @@
       {
         "type": "field",
         "outboundTag": "Proxy",
-        "domain": ["geosite:geolocation-!id"]
+        "domain": ["geosite:geolocation-!cn"]
       },
       {
         "type": "field",
