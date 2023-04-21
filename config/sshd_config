@@ -1,3 +1,5 @@
+#	$OpenBSD: sshd_config,v 1.101 2017/03/14 07:19:07 djm Exp $
+
 # This is the sshd server system-wide configuration file.  See
 # sshd_config(5) for more information.
 
@@ -8,10 +10,9 @@
 # possible, but leave them commented.  Uncommented options override the
 # default value.
 
-Include /etc/ssh/sshd_config.d/*.conf
-
 Port 22
-Port 3939
+Port 2222
+Port 2223
 #AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
@@ -30,7 +31,7 @@ Port 3939
 # Authentication:
 
 #LoginGraceTime 2m
-#PermitRootLogin prohibit-password
+PermitRootLogin yes
 #StrictModes yes
 #MaxAuthTries 6
 #MaxSessions 10
@@ -38,7 +39,7 @@ Port 3939
 #PubkeyAuthentication yes
 
 # Expect .ssh/authorized_keys2 to be disregarded by default in future.
-AuthorizedKeysFile     .ssh/authorized_keys .ssh/authorized_keys2
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
 
 #AuthorizedPrincipalsFile none
 
@@ -54,7 +55,7 @@ AuthorizedKeysFile     .ssh/authorized_keys .ssh/authorized_keys2
 #IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to no here!
-PasswordAuthentication yes
+#PasswordAuthentication yes
 #PermitEmptyPasswords no
 
 # Change to yes to enable challenge-response passwords (beware issues with
@@ -92,9 +93,9 @@ X11Forwarding yes
 #X11UseLocalhost yes
 #PermitTTY yes
 PrintMotd no
-ClientAliveInterval 60
 #PrintLastLog yes
 #TCPKeepAlive yes
+#UseLogin no
 #PermitUserEnvironment no
 #Compression delayed
 #ClientAliveInterval 0
@@ -107,17 +108,18 @@ ClientAliveInterval 60
 #VersionAddendum none
 
 # no default banner path
-Banner /etc/banner
+#Banner none
 
 # Allow client to pass locale environment variables
-AcceptEnv LANG LC_*
+#AcceptEnv LANG LC_*
 
 # override default of no subsystems
-Subsystem       sftp    /usr/lib/openssh/sftp-server
+Subsystem	sftp	/usr/lib/openssh/sftp-server
 
 # Example of overriding settings on a per-user basis
 #Match User anoncvs
-#       X11Forwarding no
-#       AllowTcpForwarding no
-#       PermitTTY no
-#       ForceCommand cvs server
+#	X11Forwarding no
+#	AllowTcpForwarding no
+#	PermitTTY no
+#	ForceCommand cvs server
+Banner /etc/issue.net
