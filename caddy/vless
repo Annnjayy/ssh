@@ -2,7 +2,7 @@
 @ws_path {
 path /worryfree
 path /vless
-path /cendrawasih
+path /ridwan
 path /*
 
 }
