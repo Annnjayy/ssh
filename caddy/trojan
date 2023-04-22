@@ -2,7 +2,7 @@
 @ws_path {
 path /worryfree
 path /trojan-ws
-path /ridwan
+path /makhluk
 path /*
 
 }
