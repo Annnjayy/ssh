@@ -16,7 +16,7 @@ defaults
 
 frontend http
         mode http
-        bind *:80
+        bind *:2086
         tcp-request inspect-delay 1ms
         option forwardfor header X-Real-IP
         http-request set-header X-Real-IP %[src]
@@ -35,20 +35,7 @@ backend sshws
 backend openresty_http
         mode http
         server http1   127.0.0.1:18020 send-proxy check
-#       server http2   127.0.0.1:18030 send-proxy check
-#       server http3   172.67.177.111:80 send-proxy check
-#       server http4   104.21.83.143:80 send-proxy check
-#       server http5   104.26.1.150:80 send-proxy check
-#       server http6   104.26.0.150:80 send-proxy check
-#       server http7   172.67.69.9:80 send-proxy check
-#       server http8   104.21.14.244:80 send-proxy check
-#       server http9   172.67.160.206:80 send-proxy check
-#       server http10  172.67.24.177:80 send-proxy check
-#       server http11  104.22.65.181:80 send-proxy check
-#       server http12  104.22.64.181:80 send-proxy check
-#       server http13  172.67.70.101:80 send-proxy check
-#       server http14  127.0.0.1:10010 send-proxy check
-#       server http15  104.18.20.226:80 send-proxy check
+
 
 frontend ssl
         mode tcp
