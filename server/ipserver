@@ -2,6 +2,8 @@
 # ALL TRAFIC IPTABLES
 CMD=$(ip -o $CMD -4 route show to default | awk '{print $5}');
 iptables -t nat -I PREROUTING -i $CMD -p udp --dport 53 -j REDIRECT --to-ports 5300
+
+###TCP
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 88 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 99 -j ACCEPT
@@ -24,7 +26,21 @@ iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 10006 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 10007 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 10008 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 10011 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 10012 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 10015 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 18020 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 10030 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 10040 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 3128 -j ACCEPT
+
+#####UDP
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 53 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2200 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 7100 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 7200 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 7300 -j ACCEPT
+
+###NO TORRENT
 iptables -A FORWARD -m string --algo bm --string "BitTorrent" -j DROP
 iptables -A FORWARD -m string --algo bm --string "BitTorrent protocol" -j DROP
 iptables -A FORWARD -m string --algo bm --string "peer_id=" -j DROP
